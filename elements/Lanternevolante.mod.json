@@ -95,10 +95,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "block.cloth.break"
+      "value": ""
     },
     "deathSound": {
-      "value": "block.cloth.break"
+      "value": ""
     },
     "stepSound": {
       "value": ""

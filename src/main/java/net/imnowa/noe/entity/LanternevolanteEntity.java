@@ -110,12 +110,12 @@ public class LanternevolanteEntity extends MonsterEntity implements IAnimatable 
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}
 
 	@Override
