@@ -1,6 +1,6 @@
 {
-  "item.noe.lanternevolante_spawn_egg": "Lanternevolante Spawn Egg",
+  "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
   "itemGroup.noe.noe_autres": "N.O.E Autres",
   "block.noe.piano": "Piano",
-  "entity.noe.lanternevolante": "Lanternevolante"
+  "entity.noe.lanternevolante": "lanterne_volante"
 }

@@ -62,6 +62,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "NbtLanterne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nbt_lanterne",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/NbtLanterneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -70,10 +88,10 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.noe.lanternevolante_spawn_egg": "Lanternevolante Spawn Egg",
+      "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
       "block.noe.piano": "Piano",
-      "entity.noe.lanternevolante": "Lanternevolante"
+      "entity.noe.lanternevolante": "lanterne_volante"
     }
   },
   "foldersRoot": {

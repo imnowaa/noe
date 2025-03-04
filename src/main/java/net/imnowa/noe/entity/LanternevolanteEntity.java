@@ -16,6 +16,8 @@ import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IServerWorld;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.ResourceLocation;
@@ -33,13 +35,18 @@ import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
+import net.imnowa.noe.procedures.NbtLanterneProcedure;
 import net.imnowa.noe.procedures.MobmonteeconstanteProcedure;
 import net.imnowa.noe.init.NoeModEntities;
+
+import javax.annotation.Nullable;
 
 public class LanternevolanteEntity extends MonsterEntity implements IAnimatable {
 	public static final DataParameter<Boolean> SHOOT = EntityDataManager.createKey(LanternevolanteEntity.class, DataSerializers.BOOLEAN);
@@ -103,17 +110,24 @@ public class LanternevolanteEntity extends MonsterEntity implements IAnimatable 
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break"));
 	}
 
 	@Override
 	public boolean onLivingFall(float l, float d) {
 		return false;
+	}
+
+	@Override
+	public ILivingEntityData onInitialSpawn(IServerWorld world, DifficultyInstance difficulty, SpawnReason reason, @Nullable ILivingEntityData livingdata, @Nullable CompoundNBT tag) {
+		ILivingEntityData retval = super.onInitialSpawn(world, difficulty, reason, livingdata, tag);
+		NbtLanterneProcedure.execute(this);
+		return retval;
 	}
 
 	@Override
