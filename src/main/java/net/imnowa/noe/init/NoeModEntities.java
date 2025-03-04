@@ -16,6 +16,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
 import net.imnowa.noe.entity.LanternevolanteEntity;
+import net.imnowa.noe.entity.DeerfoxadoEntity;
 import net.imnowa.noe.NoeMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -23,6 +24,10 @@ public class NoeModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, NoeMod.MODID);
 	public static final RegistryObject<EntityType<LanternevolanteEntity>> LANTERNEVOLANTE = register("lanternevolante",
 			EntityType.Builder.<LanternevolanteEntity>create(LanternevolanteEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LanternevolanteEntity::new)
+
+					.size(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DeerfoxadoEntity>> DEERFOXADO = register("deerfoxado",
+			EntityType.Builder.<DeerfoxadoEntity>create(DeerfoxadoEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeerfoxadoEntity::new)
 
 					.size(0.6f, 1.8f));
 
@@ -36,11 +41,13 @@ public class NoeModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			LanternevolanteEntity.init();
+			DeerfoxadoEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LANTERNEVOLANTE.get(), LanternevolanteEntity.createAttributes().create());
+		event.put(DEERFOXADO.get(), DeerfoxadoEntity.createAttributes().create());
 	}
 }

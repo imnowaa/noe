@@ -21,6 +21,7 @@ public class NoeModItems {
 	public static final RegistryObject<Item> PIANO = block(NoeModBlocks.PIANO, NoeModTabs.TAB_NOE_AUTRES);
 	public static final RegistryObject<Item> LANTERNEVOLANTE_SPAWN_EGG = REGISTRY.register("lanternevolante_spawn_egg",
 			() -> new ForgeSpawnEggItem(NoeModEntities.LANTERNEVOLANTE, -3342388, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
+	public static final RegistryObject<Item> DEERFOXADO_SPAWN_EGG = REGISTRY.register("deerfoxado_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.DEERFOXADO, -1, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
 
 	// Start of user code block custom items
 	// End of user code block custom items

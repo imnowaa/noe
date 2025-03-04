@@ -80,6 +80,21 @@
           }
         ]
       }
+    },
+    {
+      "name": "Deerfoxado",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deerfoxado",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/deerfoxado_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/model/DeerfoxadoModel.java",
+          "src/main/java/net/imnowa/noe/client/renderer/DeerfoxadoRenderer.java",
+          "src/main/java/net/imnowa/noe/entity/DeerfoxadoEntity.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -88,9 +103,11 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.noe.deerfoxado_spawn_egg": "Deerfox_ado Spawn Egg",
       "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
       "block.noe.piano": "Piano",
+      "entity.noe.deerfoxado": "Deerfox_ado",
       "entity.noe.lanternevolante": "lanterne_volante"
     }
   },
@@ -101,7 +118,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
