@@ -81,7 +81,7 @@ public class LanternevolanteEntity extends MonsterEntity implements IAnimatable 
 		super.registerData();
 		this.dataManager.register(SHOOT, false);
 		this.dataManager.register(ANIMATION, "undefined");
-		this.dataManager.register(TEXTURE, "texture_lantern");
+		this.dataManager.register(TEXTURE, "texture_lanterne");
 	}
 
 	public void setTexture(String texture) {

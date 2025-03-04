@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "lanterne_volante",
     "mobLabel": "",
-    "mobModelTexture": "texture_lantern.png",
+    "mobModelTexture": "texture_lanterne.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.4
