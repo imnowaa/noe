@@ -1,5 +1,7 @@
 package net.imnowa.noe;
 
+import software.bernie.geckolib3.GeckoLib;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -17,6 +19,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.network.PacketBuffer;
 
+import net.imnowa.noe.init.NoeModTabs;
+import net.imnowa.noe.init.NoeModItems;
+import net.imnowa.noe.init.NoeModEntities;
+import net.imnowa.noe.init.NoeModBlocks;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -32,10 +39,16 @@ public class NoeMod {
 	public static final String MODID = "noe";
 
 	public NoeMod() {
+		GeckoLib.initialize();
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(new NoeModFMLBusEvents(this));
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		NoeModTabs.load();
+
+		NoeModBlocks.REGISTRY.register(bus);
+		NoeModItems.REGISTRY.register(bus);
+		NoeModEntities.REGISTRY.register(bus);
 
 		bus.register(this);
 		// Start of user code block mod init

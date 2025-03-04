@@ -1,11 +1,80 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "NOEAutres",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noe_autres",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Piano",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piano",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/piano.json",
+          "src/main/java/net/imnowa/noe/block/PianoBlock.java",
+          "src/main/resources/data/noe/loot_tables/blocks/piano.json",
+          "src/main/resources/assets/noe/blockstates/piano.json",
+          "src/main/resources/assets/noe/models/item/piano.json"
+        ]
+      }
+    },
+    {
+      "name": "Lanternevolante",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lanternevolante",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/lanternevolante_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/model/LanternevolanteModel.java",
+          "src/main/java/net/imnowa/noe/entity/LanternevolanteEntity.java",
+          "src/main/java/net/imnowa/noe/client/renderer/LanternevolanteRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Mobmonteeconstante",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mobmonteeconstante",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/MobmonteeconstanteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.noe.lanternevolante_spawn_egg": "Lanternevolante Spawn Egg",
+      "itemGroup.noe.noe_autres": "N.O.E Autres",
+      "block.noe.piano": "Piano",
+      "entity.noe.lanternevolante": "Lanternevolante"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -15,15 +84,18 @@
     "modid": "noe",
     "modName": "NOE",
     "version": "1.0.0",
-    "author": "gaspa, MCreator",
+    "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
     "currentGenerator": "forge-1.16.5",
+    "credits": "Pour le serveur N.O.E",
     "modElementsPackage": "net.imnowa.noe"
   },
   "mcreatorVersion": 202400452410

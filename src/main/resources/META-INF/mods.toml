@@ -7,8 +7,8 @@ modId="noe"
 version="1.0.0"
 displayName="NOE"
 displayURL="https://mcreator.net"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="gaspa, MCreator"
+credits="Pour le serveur N.O.E"
+authors="imnowa"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -21,6 +21,12 @@ authors="gaspa, MCreator"
     side="BOTH"
 
 
+[[dependencies.noe]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration
