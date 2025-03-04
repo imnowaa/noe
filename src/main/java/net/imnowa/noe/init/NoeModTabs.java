@@ -6,7 +6,6 @@ package net.imnowa.noe.init;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
@@ -18,7 +17,7 @@ public class NoeModTabs {
 			@Override
 			@OnlyIn(Dist.CLIENT)
 			public ItemStack createIcon() {
-				return new ItemStack(Items.ENDER_PEARL);
+				return new ItemStack(NoeModItems.LANTERNEVOLANTE_SPAWN_EGG.get());
 			}
 
 			@Override

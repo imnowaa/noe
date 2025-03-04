@@ -4,7 +4,7 @@
   "definition": {
     "name": "N.O.E Autres",
     "icon": {
-      "value": "Items.ENDER_PEARL"
+      "value": "CUSTOM:Lanternevolante.spawn_egg"
     },
     "showSearch": false
   }
