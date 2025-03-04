@@ -67,7 +67,6 @@ public class LanternevolanteEntity extends MonsterEntity implements IAnimatable 
 		stepHeight = 0.6f;
 		experienceValue = 0;
 		setNoAI(false);
-		enablePersistence();
 		this.moveController = new FlyingMovementController(this, 10, true);
 	}
 
@@ -107,11 +106,6 @@ public class LanternevolanteEntity extends MonsterEntity implements IAnimatable 
 	@Override
 	public CreatureAttribute getCreatureAttribute() {
 		return CreatureAttribute.UNDEFINED;
-	}
-
-	@Override
-	public boolean canDespawn(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override
