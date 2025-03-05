@@ -23,7 +23,7 @@ public class DeerfoxadoRenderer extends GeoEntityRenderer<DeerfoxadoEntity> {
 
 	public DeerfoxadoRenderer(EntityRendererManager renderManager) {
 		super(renderManager, new DeerfoxadoModel());
-		this.shadowSize = 0.5f;
+		this.shadowSize = 0.7f;
 	}
 
 	@Override

@@ -33,6 +33,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -60,7 +61,7 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 
 	public DeerfoxadoEntity(EntityType<DeerfoxadoEntity> type, World world) {
 		super(type, world);
-		stepHeight = 0.6f;
+		stepHeight = 1f;
 		experienceValue = 0;
 		setNoAI(false);
 		enablePersistence();
@@ -93,6 +94,7 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 		this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1));
 		this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 		this.goalSelector.addGoal(6, new SwimGoal(this));
+		this.goalSelector.addGoal(7, new PanicGoal(this, 1.2));
 	}
 
 	@Override
@@ -174,16 +176,22 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 	public static AttributeModifierMap.MutableAttribute createAttributes() {
 		AttributeModifierMap.MutableAttribute builder = MobEntity.func_233666_p_();
 		builder = builder.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.createMutableAttribute(Attributes.MAX_HEALTH, 15);
+		builder = builder.createMutableAttribute(Attributes.MAX_HEALTH, 20);
 		builder = builder.createMutableAttribute(Attributes.ARMOR, 0);
-		builder = builder.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.createMutableAttribute(Attributes.ATTACK_DAMAGE, 2);
 		builder = builder.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}
 
 	private <E extends IAnimatable> PlayState movementPredicate(AnimationEvent<E> event) {
 		if (this.animationprocedure.equals("empty")) {
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.idle", EDefaultLoopTypes.LOOP));
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
+
+			) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.walk", EDefaultLoopTypes.LOOP));
+				return PlayState.CONTINUE;
+			}
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.model.stand", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;
