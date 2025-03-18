@@ -30,7 +30,7 @@
       "name": "Lanternevolante",
       "type": "animatedentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "lanternevolante",
       "metadata": {
         "files": [
@@ -85,7 +85,7 @@
       "name": "Deerfoxado",
       "type": "animatedentity",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "deerfoxado",
       "metadata": {
         "files": [
@@ -118,7 +118,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

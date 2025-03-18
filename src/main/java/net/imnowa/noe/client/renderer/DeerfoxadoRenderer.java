@@ -18,8 +18,15 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class DeerfoxadoRenderer extends GeoEntityRenderer<DeerfoxadoEntity> {
 	@Override
 	public ResourceLocation getEntityTexture(DeerfoxadoEntity entity) {
-		return new ResourceLocation("noe:textures/entities/texture_deerfox.png");
+	    return getTextureLocation(entity);
 	}
+	
+	@Override
+	public ResourceLocation getTextureLocation(DeerfoxadoEntity entity) {
+	    return new ResourceLocation("noe", "textures/entities/texture_deerfox.png");
+	}
+
+
 
 	public DeerfoxadoRenderer(EntityRendererManager renderManager) {
 		super(renderManager, new DeerfoxadoModel());
@@ -28,7 +35,7 @@ public class DeerfoxadoRenderer extends GeoEntityRenderer<DeerfoxadoEntity> {
 
 	@Override
 	public RenderType getRenderType(DeerfoxadoEntity animatable, float partialTicks, MatrixStack poseStack, IRenderTypeBuffer bufferSource, IVertexBuilder buffer, int packedLight, ResourceLocation texture) {
-		return RenderType.getEntityTranslucent(getTextureLocation(animatable));
+		return RenderType.getEntityCutoutNoCull(getTextureLocation(animatable));
 	}
 
 	@Override

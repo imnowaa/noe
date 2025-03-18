@@ -18,7 +18,12 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class LanternevolanteRenderer extends GeoEntityRenderer<LanternevolanteEntity> {
 	@Override
 	public ResourceLocation getEntityTexture(LanternevolanteEntity entity) {
-		return new ResourceLocation("noe:textures/entities/texture_lanterne.png");
+		return getTextureLocation(entity);
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LanternevolanteEntity entity) {
+	    return new ResourceLocation("noe", "textures/entities/texture_lanterne.png");
 	}
 
 	public LanternevolanteRenderer(EntityRendererManager renderManager) {
