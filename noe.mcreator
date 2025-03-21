@@ -95,6 +95,21 @@
           "src/main/java/net/imnowa/noe/entity/DeerfoxadoEntity.java"
         ]
       }
+    },
+    {
+      "name": "SceptreCORE",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sceptre_core",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/sceptre_core.json",
+          "src/main/java/net/imnowa/noe/item/renderer/SceptreCOREItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/SceptreCOREItem.java",
+          "src/main/java/net/imnowa/noe/item/model/SceptreCOREItemModel.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -104,6 +119,7 @@
   "language_map": {
     "en_us": {
       "item.noe.deerfoxado_spawn_egg": "Deerfox_ado Spawn Egg",
+      "item.noe.sceptre_core": "Sceptre de CORE",
       "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
       "block.noe.piano": "Piano",

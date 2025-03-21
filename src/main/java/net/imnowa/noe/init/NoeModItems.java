@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.Block;
 
+import net.imnowa.noe.item.SceptreCOREItem;
 import net.imnowa.noe.NoeMod;
 
 public class NoeModItems {
@@ -22,6 +23,7 @@ public class NoeModItems {
 	public static final RegistryObject<Item> LANTERNEVOLANTE_SPAWN_EGG = REGISTRY.register("lanternevolante_spawn_egg",
 			() -> new ForgeSpawnEggItem(NoeModEntities.LANTERNEVOLANTE, -3342388, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
 	public static final RegistryObject<Item> DEERFOXADO_SPAWN_EGG = REGISTRY.register("deerfoxado_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.DEERFOXADO, -1, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
+	public static final RegistryObject<Item> SCEPTRE_CORE = REGISTRY.register("sceptre_core", () -> new SceptreCOREItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
