@@ -20,6 +20,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.network.PacketBuffer;
 
 import net.imnowa.noe.init.NoeModTabs;
+import net.imnowa.noe.init.NoeModMenus;
 import net.imnowa.noe.init.NoeModItems;
 import net.imnowa.noe.init.NoeModEntities;
 import net.imnowa.noe.init.NoeModBlocks;
@@ -49,6 +50,8 @@ public class NoeMod {
 		NoeModBlocks.REGISTRY.register(bus);
 		NoeModItems.REGISTRY.register(bus);
 		NoeModEntities.REGISTRY.register(bus);
+
+		NoeModMenus.REGISTRY.register(bus);
 
 		bus.register(this);
 		// Start of user code block mod init

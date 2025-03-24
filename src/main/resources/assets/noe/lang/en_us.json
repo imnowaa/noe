@@ -1,9 +1,13 @@
 {
-  "item.noe.deerfoxado_spawn_egg": "Deerfox_ado Spawn Egg",
+  "item.noe.deerfoxado_spawn_egg": "Deerfoxado Spawn Egg",
+  "item.noe.horloge": "Horloge",
   "item.noe.sceptre_core": "Sceptre de CORE",
+  "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
   "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
+  "item.noe.tablette": "Tablette",
   "itemGroup.noe.noe_autres": "N.O.E Autres",
   "block.noe.piano": "Piano",
-  "entity.noe.deerfoxado": "Deerfox_ado",
+  "item.noe.tablette_photo": "Tablette (Mode Photo)",
+  "entity.noe.deerfoxado": "Deerfoxado",
   "entity.noe.lanternevolante": "lanterne_volante"
 }

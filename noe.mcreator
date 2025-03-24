@@ -82,21 +82,6 @@
       }
     },
     {
-      "name": "Deerfoxado",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "deerfoxado",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/noe/models/item/deerfoxado_spawn_egg.json",
-          "src/main/java/net/imnowa/noe/entity/model/DeerfoxadoModel.java",
-          "src/main/java/net/imnowa/noe/client/renderer/DeerfoxadoRenderer.java",
-          "src/main/java/net/imnowa/noe/entity/DeerfoxadoEntity.java"
-        ]
-      }
-    },
-    {
       "name": "SceptreCORE",
       "type": "animateditem",
       "compiles": true,
@@ -110,6 +95,181 @@
           "src/main/java/net/imnowa/noe/item/model/SceptreCOREItemModel.java"
         ]
       }
+    },
+    {
+      "name": "Horloge",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horloge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/renderer/HorlogeItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/HorlogeItem.java",
+          "src/main/resources/assets/noe/models/item/horloge.json",
+          "src/main/java/net/imnowa/noe/item/model/HorlogeItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "TabletteGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/world/inventory/TabletteGUIMenu.java",
+          "src/main/java/net/imnowa/noe/network/TabletteGUIButtonMessage.java",
+          "src/main/java/net/imnowa/noe/client/gui/TabletteGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "GoPhotoMode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_photo_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/GoPhotoModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotoOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photo_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/client/screens/PhotoOverlayOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "PhotoOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photo_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/PhotoOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabletteRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tablette",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/renderer/TabletteItemRenderer.java",
+          "src/main/resources/assets/noe/models/item/tablette.json",
+          "src/main/java/net/imnowa/noe/item/TabletteItem.java",
+          "src/main/java/net/imnowa/noe/item/model/TabletteItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "TablettePhoto",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_photo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/tablette_photo.json",
+          "src/main/java/net/imnowa/noe/item/model/TablettePhotoItemModel.java",
+          "src/main/java/net/imnowa/noe/item/renderer/TablettePhotoItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/TablettePhotoItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TablettePhotoRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_photo_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TablettePhotoRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Deerfoxado",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deerfoxado",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/deerfoxado_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/model/DeerfoxadoModel.java",
+          "src/main/java/net/imnowa/noe/client/renderer/DeerfoxadoRenderer.java",
+          "src/main/java/net/imnowa/noe/entity/DeerfoxadoEntity.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -118,12 +278,16 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.noe.deerfoxado_spawn_egg": "Deerfox_ado Spawn Egg",
+      "item.noe.deerfoxado_spawn_egg": "Deerfoxado Spawn Egg",
+      "item.noe.horloge": "Horloge",
       "item.noe.sceptre_core": "Sceptre de CORE",
+      "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
       "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
+      "item.noe.tablette": "Tablette",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
       "block.noe.piano": "Piano",
-      "entity.noe.deerfoxado": "Deerfox_ado",
+      "item.noe.tablette_photo": "Tablette (Mode Photo)",
+      "entity.noe.deerfoxado": "Deerfoxado",
       "entity.noe.lanternevolante": "lanterne_volante"
     }
   },
@@ -134,7 +298,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

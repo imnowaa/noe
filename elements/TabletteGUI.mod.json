@@ -1,0 +1,48 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 140,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "tablette_background.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 50,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_mode_photo",
+          "text": "Mode Photo",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "GoPhotoMode"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 176,
+          "y": 108,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

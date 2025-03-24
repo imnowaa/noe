@@ -33,8 +33,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
-import net.minecraft.entity.ai.goal.PanicGoal;
+import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
@@ -64,7 +65,6 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 		stepHeight = 1f;
 		experienceValue = 0;
 		setNoAI(false);
-		enablePersistence();
 	}
 
 	@Override
@@ -91,10 +91,16 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return this.attacker.getWidth() * this.attacker.getWidth() + entity.getWidth();
+			}
+		});
 		this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1));
-		this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-		this.goalSelector.addGoal(6, new SwimGoal(this));
-		this.goalSelector.addGoal(7, new PanicGoal(this, 1.2));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
+		this.goalSelector.addGoal(5, new SwimGoal(this));
 	}
 
 	@Override
@@ -103,18 +109,13 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 	}
 
 	@Override
-	public boolean canDespawn(double distanceToClosestPlayer) {
-		return false;
-	}
-
-	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
@@ -176,9 +177,9 @@ public class DeerfoxadoEntity extends MonsterEntity implements IAnimatable {
 	public static AttributeModifierMap.MutableAttribute createAttributes() {
 		AttributeModifierMap.MutableAttribute builder = MobEntity.func_233666_p_();
 		builder = builder.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.createMutableAttribute(Attributes.MAX_HEALTH, 20);
+		builder = builder.createMutableAttribute(Attributes.MAX_HEALTH, 10);
 		builder = builder.createMutableAttribute(Attributes.ARMOR, 0);
-		builder = builder.createMutableAttribute(Attributes.ATTACK_DAMAGE, 2);
+		builder = builder.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}

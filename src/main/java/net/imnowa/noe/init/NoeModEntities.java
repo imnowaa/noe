@@ -29,7 +29,7 @@ public class NoeModEntities {
 	public static final RegistryObject<EntityType<DeerfoxadoEntity>> DEERFOXADO = register("deerfoxado",
 			EntityType.Builder.<DeerfoxadoEntity>create(DeerfoxadoEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeerfoxadoEntity::new)
 
-					.size(0.7f, 1.5f));
+					.size(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

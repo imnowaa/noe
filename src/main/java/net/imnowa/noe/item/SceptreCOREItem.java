@@ -94,7 +94,7 @@ public class SceptreCOREItem extends Item implements IAnimatable {
 		if (equipmentSlot == EquipmentSlotType.MAINHAND) {
 			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 			builder.putAll(super.getAttributeModifiers(equipmentSlot));
-			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", 7d, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", 11d, AttributeModifier.Operation.ADDITION));
 			builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Item modifier", -2.4, AttributeModifier.Operation.ADDITION));
 			return builder.build();
 		}
