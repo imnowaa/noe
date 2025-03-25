@@ -257,17 +257,16 @@
       }
     },
     {
-      "name": "Deerfoxado",
-      "type": "animatedentity",
+      "name": "DeerAdo",
+      "type": "livingentity",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "deerfoxado",
+      "registry_name": "deer_ado",
       "metadata": {
         "files": [
-          "src/main/resources/assets/noe/models/item/deerfoxado_spawn_egg.json",
-          "src/main/java/net/imnowa/noe/entity/model/DeerfoxadoModel.java",
-          "src/main/java/net/imnowa/noe/client/renderer/DeerfoxadoRenderer.java",
-          "src/main/java/net/imnowa/noe/entity/DeerfoxadoEntity.java"
+          "src/main/java/net/imnowa/noe/client/renderer/DeerAdoRenderer.java",
+          "src/main/resources/assets/noe/models/item/deer_ado_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/DeerAdoEntity.java"
         ]
       }
     }
@@ -278,17 +277,17 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.noe.deerfoxado_spawn_egg": "Deerfoxado Spawn Egg",
+      "item.noe.tablette": "Tablette",
+      "block.noe.piano": "Piano",
+      "item.noe.deer_ado_spawn_egg": "Deerfox Adolescent Spawn Egg",
+      "entity.noe.deer_ado": "Deerfox Adolescent",
+      "entity.noe.lanternevolante": "lanterne_volante",
       "item.noe.horloge": "Horloge",
       "item.noe.sceptre_core": "Sceptre de CORE",
       "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
       "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
-      "item.noe.tablette": "Tablette",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
-      "block.noe.piano": "Piano",
-      "item.noe.tablette_photo": "Tablette (Mode Photo)",
-      "entity.noe.deerfoxado": "Deerfoxado",
-      "entity.noe.lanternevolante": "lanterne_volante"
+      "item.noe.tablette_photo": "Tablette (Mode Photo)"
     }
   },
   "foldersRoot": {
@@ -298,7 +297,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

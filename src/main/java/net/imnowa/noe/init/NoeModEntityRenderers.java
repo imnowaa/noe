@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.imnowa.noe.client.renderer.LanternevolanteRenderer;
-import net.imnowa.noe.client.renderer.DeerfoxadoRenderer;
+import net.imnowa.noe.client.renderer.DeerAdoRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class NoeModEntityRenderers {
@@ -29,6 +29,6 @@ public class NoeModEntityRenderers {
 
 	private static void renders() {
 		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.LANTERNEVOLANTE.get(), LanternevolanteRenderer::new);
-		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.DEERFOXADO.get(), DeerfoxadoRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.DEER_ADO.get(), DeerAdoRenderer::new);
 	}
 }

@@ -1,23 +1,32 @@
 {
   "_fv": 73,
-  "_type": "animatedentity",
+  "_type": "livingentity",
   "definition": {
-    "mobName": "Deerfoxado",
+    "mobName": "Deerfox Adolescent",
     "mobLabel": "",
+    "mobModelName": "Modeldeerfox_ado",
     "mobModelTexture": "texture_deerfox.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
     "visualScale": {
       "fixedValue": 1.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "modelLayers": [],
+    "animations": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 1.2,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 1.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -1,
@@ -58,19 +67,23 @@
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.3,
+    "movementSpeed": 0.19999999999999998,
+    "stepHeight": 1.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
-    "lerp": 4,
     "disableCollisions": false,
     "ridable": true,
     "canControlForward": true,
@@ -106,35 +119,12 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "model.deerfox_ado.geo.json",
-    "groupName": "",
-    "animation1": "animation.model.stand",
-    "animation2": "animation.model.walk",
-    "animation3": "",
-    "animation4": "",
-    "animation5": "",
-    "animation6": "",
-    "animation7": "",
-    "animation8": "",
-    "animation9": "",
-    "animation10": "",
-    "enable2": true,
-    "enable3": false,
-    "enable4": false,
-    "enable5": false,
-    "enable6": false,
-    "enable7": false,
-    "enable8": false,
-    "enable9": false,
-    "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
-    "headMovement": false,
-    "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
@@ -143,8 +133,14 @@
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
-    "height": 1.0,
-    "attackRate": 7,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false,
     "raidSpawnsCount": [
       4,
       3,
@@ -153,14 +149,6 @@
       4,
       4,
       2
-    ],
-    "spawnThisMob": false,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 20,
-    "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 4,
-    "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [],
-    "spawnInDungeons": false
+    ]
   }
 }

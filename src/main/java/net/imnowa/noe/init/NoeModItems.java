@@ -29,7 +29,7 @@ public class NoeModItems {
 	public static final RegistryObject<Item> HORLOGE = REGISTRY.register("horloge", () -> new HorlogeItem());
 	public static final RegistryObject<Item> TABLETTE = REGISTRY.register("tablette", () -> new TabletteItem());
 	public static final RegistryObject<Item> TABLETTE_PHOTO = REGISTRY.register("tablette_photo", () -> new TablettePhotoItem());
-	public static final RegistryObject<Item> DEERFOXADO_SPAWN_EGG = REGISTRY.register("deerfoxado_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.DEERFOXADO, -1, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
+	public static final RegistryObject<Item> DEER_ADO_SPAWN_EGG = REGISTRY.register("deer_ado_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.DEER_ADO, -1, -1, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
 
 	// Start of user code block custom items
 	// End of user code block custom items
