@@ -1,13 +1,19 @@
 {
   "item.noe.tablette": "Tablette",
+  "item.noe.slimycat_spawn_egg": "Slimycat Spawn Egg",
   "block.noe.piano": "Piano",
   "item.noe.deer_ado_spawn_egg": "Deerfox Adolescent Spawn Egg",
   "entity.noe.deer_ado": "Deerfox Adolescent",
+  "item.noe.roko_noir_spawn_egg": "Roko Noir Spawn Egg",
   "entity.noe.lanternevolante": "lanterne_volante",
   "item.noe.horloge": "Horloge",
   "item.noe.sceptre_core": "Sceptre de CORE",
   "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
   "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
   "itemGroup.noe.noe_autres": "N.O.E Autres",
-  "item.noe.tablette_photo": "Tablette (Mode Photo)"
+  "entity.noe.roko_marron": "Roko Marron",
+  "item.noe.tablette_photo": "Tablette (Mode Photo)",
+  "entity.noe.slimycat": "Slimycat",
+  "entity.noe.roko_noir": "Roko Noir",
+  "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg"
 }

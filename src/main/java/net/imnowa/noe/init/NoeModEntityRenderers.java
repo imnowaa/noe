@@ -11,6 +11,9 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.imnowa.noe.client.renderer.SlimycatRenderer;
+import net.imnowa.noe.client.renderer.RokoNoirRenderer;
+import net.imnowa.noe.client.renderer.RokoMarronRenderer;
 import net.imnowa.noe.client.renderer.LanternevolanteRenderer;
 import net.imnowa.noe.client.renderer.DeerAdoRenderer;
 
@@ -30,5 +33,8 @@ public class NoeModEntityRenderers {
 	private static void renders() {
 		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.LANTERNEVOLANTE.get(), LanternevolanteRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.DEER_ADO.get(), DeerAdoRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.SLIMYCAT.get(), SlimycatRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.ROKO_MARRON.get(), RokoMarronRenderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(NoeModEntities.ROKO_NOIR.get(), RokoNoirRenderer::new);
 	}
 }

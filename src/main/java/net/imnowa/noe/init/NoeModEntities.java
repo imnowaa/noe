@@ -15,6 +15,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.imnowa.noe.entity.SlimycatEntity;
+import net.imnowa.noe.entity.RokoNoirEntity;
+import net.imnowa.noe.entity.RokoMarronEntity;
 import net.imnowa.noe.entity.LanternevolanteEntity;
 import net.imnowa.noe.entity.DeerAdoEntity;
 import net.imnowa.noe.NoeMod;
@@ -25,11 +28,23 @@ public class NoeModEntities {
 	public static final RegistryObject<EntityType<LanternevolanteEntity>> LANTERNEVOLANTE = register("lanternevolante",
 			EntityType.Builder.<LanternevolanteEntity>create(LanternevolanteEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LanternevolanteEntity::new)
 
-					.size(0.6f, 1.8f));
+					.size(0.6f, 0.7f));
 	public static final RegistryObject<EntityType<DeerAdoEntity>> DEER_ADO = register("deer_ado",
 			EntityType.Builder.<DeerAdoEntity>create(DeerAdoEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeerAdoEntity::new)
 
-					.size(0.6f, 1.2f));
+					.size(0.8f, 1.5f));
+	public static final RegistryObject<EntityType<SlimycatEntity>> SLIMYCAT = register("slimycat",
+			EntityType.Builder.<SlimycatEntity>create(SlimycatEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SlimycatEntity::new)
+
+					.size(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RokoMarronEntity>> ROKO_MARRON = register("roko_marron",
+			EntityType.Builder.<RokoMarronEntity>create(RokoMarronEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RokoMarronEntity::new)
+
+					.size(1.8f, 3.5f));
+	public static final RegistryObject<EntityType<RokoNoirEntity>> ROKO_NOIR = register("roko_noir",
+			EntityType.Builder.<RokoNoirEntity>create(RokoNoirEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RokoNoirEntity::new)
+
+					.size(1.8f, 3.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -42,6 +57,9 @@ public class NoeModEntities {
 		event.enqueueWork(() -> {
 			LanternevolanteEntity.init();
 			DeerAdoEntity.init();
+			SlimycatEntity.init();
+			RokoMarronEntity.init();
+			RokoNoirEntity.init();
 		});
 	}
 
@@ -49,5 +67,8 @@ public class NoeModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LANTERNEVOLANTE.get(), LanternevolanteEntity.createAttributes().create());
 		event.put(DEER_ADO.get(), DeerAdoEntity.createAttributes().create());
+		event.put(SLIMYCAT.get(), SlimycatEntity.createAttributes().create());
+		event.put(ROKO_MARRON.get(), RokoMarronEntity.createAttributes().create());
+		event.put(ROKO_NOIR.get(), RokoNoirEntity.createAttributes().create());
 	}
 }
