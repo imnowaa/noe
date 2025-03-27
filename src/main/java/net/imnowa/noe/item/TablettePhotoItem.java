@@ -32,6 +32,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.nbt.CompoundNBT;
 
 import net.imnowa.noe.procedures.TablettePhotoRCProcedure;
 import net.imnowa.noe.item.renderer.TablettePhotoItemRenderer;
@@ -101,10 +102,17 @@ public class TablettePhotoItem extends Item implements IAnimatable {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
-		ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
-		TablettePhotoRCProcedure.execute(entity);
-		return ar;
+	    ItemStack stack = entity.getHeldItem(hand);
+	    
+	    if (!world.isRemote) { // Côté serveur
+	        ensurePersistentNBT(stack);
+	    }
+	
+	    TablettePhotoRCProcedure.execute(entity);
+	    
+	    return super.onItemRightClick(world, entity, hand);
 	}
+
 
 	@Override
 	public ActionResultType onItemUseFirst(ItemStack itemstack, ItemUseContext context) {
@@ -112,6 +120,27 @@ public class TablettePhotoItem extends Item implements IAnimatable {
 		TablettePhotoRCProcedure.execute(context.getPlayer());
 		return ActionResultType.SUCCESS;
 	}
+
+	private void ensurePersistentNBT(ItemStack stack) {
+	    if (!stack.hasTag()) {
+	        stack.setTag(new CompoundNBT());
+	    }
+	
+	    CompoundNBT tag = stack.getTag();
+	    if (tag != null && !tag.contains("Notes")) {
+	        tag.putString("Notes", ""); // Assure un stockage persistant des notes
+	    }
+	}
+
+	@Override
+	public boolean canContinueUsing(ItemStack oldStack, ItemStack newStack) {
+	    if (oldStack.getItem() == newStack.getItem()) {
+	        ensurePersistentNBT(newStack); // Empêche la réinitialisation des données
+	        return true;
+	    }
+	    return super.canContinueUsing(oldStack, newStack);
+	}
+
 
 	@Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> tooltip, ITooltipFlag flag) {

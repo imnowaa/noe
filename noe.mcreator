@@ -402,7 +402,7 @@
       "name": "TabletteOff",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "tablette_off",
       "metadata": {
         "files": [
@@ -584,7 +584,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
