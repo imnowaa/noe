@@ -3,7 +3,7 @@
   "_type": "animateditem",
   "definition": {
     "renderType": 0,
-    "texture": "tablette",
+    "texture": "tabletteon",
     "name": "Tablette (Mode Photo)",
     "idle": "animation.tablette.idle",
     "rarity": "UNCOMMON",

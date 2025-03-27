@@ -19,6 +19,6 @@ public class TabletteItemModel extends AnimatedGeoModel<TabletteItem> {
 
 	@Override
 	public ResourceLocation getTextureLocation(TabletteItem animatable) {
-		return new ResourceLocation("noe:textures/item/tablette.png");
+		return new ResourceLocation("noe:textures/item/tabletteon.png");
 	}
 }

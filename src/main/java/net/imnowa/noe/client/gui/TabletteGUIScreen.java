@@ -1,12 +1,11 @@
 package net.imnowa.noe.client.gui;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.gui.widget.button.Button;
+import net.minecraft.client.gui.widget.button.ImageButton;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
@@ -24,7 +23,9 @@ public class TabletteGUIScreen extends ContainerScreen<TabletteGUIMenu> {
 	private final World world;
 	private final int x, y, z;
 	private final PlayerEntity entity;
-	Button button_mode_photo;
+	ImageButton imagebutton_bouton_blocnote;
+	ImageButton imagebutton_bouton_blocnote1;
+	ImageButton imagebutton_bouton_onoff_bon;
 
 	public TabletteGUIScreen(TabletteGUIMenu container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
@@ -50,8 +51,8 @@ public class TabletteGUIScreen extends ContainerScreen<TabletteGUIMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("noe:textures/screens/tablette_background.png"));
-		this.blit(ms, this.guiLeft + 0, this.guiTop + 0, 0, 0, 200, 140, 200, 140);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("noe:textures/screens/tablette_allume.png"));
+		this.blit(ms, this.guiLeft + -140, this.guiTop + -55, 0, 0, 374, 225, 374, 225);
 
 		RenderSystem.disableBlend();
 	}
@@ -72,13 +73,29 @@ public class TabletteGUIScreen extends ContainerScreen<TabletteGUIMenu> {
 	@Override
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
-		button_mode_photo = new Button(this.guiLeft + 62, this.guiTop + 58, 77, 20, new TranslationTextComponent("gui.noe.tablette_gui.button_mode_photo"), e -> {
+		imagebutton_bouton_blocnote = new ImageButton(this.guiLeft + 109, this.guiTop + 36, 48, 44, 0, 0, 44, new ResourceLocation("noe:textures/screens/atlas/imagebutton_bouton_blocnote.png"), 48, 88, e -> {
 			if (true) {
 				NoeMod.PACKET_HANDLER.sendToServer(new TabletteGUIButtonMessage(0, x, y, z));
 				TabletteGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-		guistate.put("button:button_mode_photo", button_mode_photo);
-		this.addButton(button_mode_photo);
+		guistate.put("button:imagebutton_bouton_blocnote", imagebutton_bouton_blocnote);
+		this.addButton(imagebutton_bouton_blocnote);
+		imagebutton_bouton_blocnote1 = new ImageButton(this.guiLeft + 37, this.guiTop + 38, 47, 42, 0, 0, 42, new ResourceLocation("noe:textures/screens/atlas/imagebutton_bouton_blocnote1.png"), 47, 84, e -> {
+			if (true) {
+				NoeMod.PACKET_HANDLER.sendToServer(new TabletteGUIButtonMessage(1, x, y, z));
+				TabletteGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_bouton_blocnote1", imagebutton_bouton_blocnote1);
+		this.addButton(imagebutton_bouton_blocnote1);
+		imagebutton_bouton_onoff_bon = new ImageButton(this.guiLeft + 3, this.guiTop + -4, 19, 21, 0, 0, 21, new ResourceLocation("noe:textures/screens/atlas/imagebutton_bouton_onoff_bon.png"), 19, 42, e -> {
+			if (true) {
+				NoeMod.PACKET_HANDLER.sendToServer(new TabletteGUIButtonMessage(2, x, y, z));
+				TabletteGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_bouton_onoff_bon", imagebutton_bouton_onoff_bon);
+		this.addButton(imagebutton_bouton_onoff_bon);
 	}
 }

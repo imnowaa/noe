@@ -10,41 +10,39 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.entity.player.PlayerEntity;
 
-import net.imnowa.noe.world.inventory.TabletteGUIMenu;
-import net.imnowa.noe.procedures.TabToBlocNoteProcedure;
-import net.imnowa.noe.procedures.TabOnToOffProcedure;
-import net.imnowa.noe.procedures.GoPhotoModeProcedure;
+import net.imnowa.noe.world.inventory.TabletteOffGUIMenu;
+import net.imnowa.noe.procedures.TabOffToOnProcedure;
 import net.imnowa.noe.NoeMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class TabletteGUIButtonMessage {
+public class TabletteOffGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public TabletteGUIButtonMessage(PacketBuffer buffer) {
+	public TabletteOffGUIButtonMessage(PacketBuffer buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public TabletteGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public TabletteOffGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(TabletteGUIButtonMessage message, PacketBuffer buffer) {
+	public static void buffer(TabletteOffGUIButtonMessage message, PacketBuffer buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(TabletteGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(TabletteOffGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			PlayerEntity entity = context.getSender();
@@ -59,26 +57,18 @@ public class TabletteGUIButtonMessage {
 
 	public static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
-		HashMap guistate = TabletteGUIMenu.guistate;
+		HashMap guistate = TabletteOffGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			TabToBlocNoteProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
-
-			GoPhotoModeProcedure.execute(entity);
-		}
-		if (buttonID == 2) {
-
-			TabOnToOffProcedure.execute(world, x, y, z, entity);
+			TabOffToOnProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		NoeMod.addNetworkMessage(TabletteGUIButtonMessage.class, TabletteGUIButtonMessage::buffer, TabletteGUIButtonMessage::new, TabletteGUIButtonMessage::handler);
+		NoeMod.addNetworkMessage(TabletteOffGUIButtonMessage.class, TabletteOffGUIButtonMessage::buffer, TabletteOffGUIButtonMessage::new, TabletteOffGUIButtonMessage::handler);
 	}
 }

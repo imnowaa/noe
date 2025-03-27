@@ -21,6 +21,17 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
+import java.util.List;
+import javax.annotation.Nullable;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.client.util.ITooltipFlag;
 
 import net.imnowa.noe.procedures.TablettePhotoRCProcedure;
 import net.imnowa.noe.item.renderer.TablettePhotoItemRenderer;
@@ -101,4 +112,26 @@ public class TablettePhotoItem extends Item implements IAnimatable {
 		TablettePhotoRCProcedure.execute(context.getPlayer());
 		return ActionResultType.SUCCESS;
 	}
+
+	@Override
+    public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+        super.addInformation(stack, world, tooltip, flag);
+        
+        if (stack.hasTag()) {
+            CompoundNBT tag = stack.getTag();
+            if (tag != null && tag.contains("Notes", 8)) {
+                String note = tag.getString("Notes");
+                if (note.isEmpty()) {
+                    tooltip.add(new StringTextComponent("La tablette n'a pas de notes.").mergeStyle(TextFormatting.RED));
+                } else {
+                    tooltip.add(new StringTextComponent("Notes :").mergeStyle(TextFormatting.GRAY));
+                    tooltip.add(new StringTextComponent(note).mergeStyle(TextFormatting.AQUA));
+                }
+            } else {
+                tooltip.add(new StringTextComponent("La tablette n'a pas de notes.").mergeStyle(TextFormatting.RED));
+            }
+        } else {
+            tooltip.add(new StringTextComponent("La tablette n'a pas de notes.").mergeStyle(TextFormatting.RED));
+        }
+    }
 }

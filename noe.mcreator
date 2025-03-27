@@ -212,7 +212,7 @@
       "name": "Tablette",
       "type": "animateditem",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "tablette",
       "metadata": {
         "files": [
@@ -227,7 +227,7 @@
       "name": "TablettePhoto",
       "type": "animateditem",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "tablette_photo",
       "metadata": {
         "files": [
@@ -311,31 +311,270 @@
           "src/main/java/net/imnowa/noe/client/renderer/RokoNoirRenderer.java"
         ]
       }
+    },
+    {
+      "name": "TabNoteGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_note_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/world/inventory/TabNoteGUIMenu.java",
+          "src/main/java/net/imnowa/noe/client/gui/TabNoteGUIScreen.java",
+          "src/main/java/net/imnowa/noe/network/TabNoteGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "TabToBlocNote",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_to_bloc_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabToBlocNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SaveNote",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/SaveNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteOff",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/TabletteOffItem.java",
+          "src/main/resources/assets/noe/models/item/tablette_off.json"
+        ]
+      }
+    },
+    {
+      "name": "TabOffToOn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_off_to_on",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabOffToOnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteOffGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_off_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/client/gui/TabletteOffGUIScreen.java",
+          "src/main/java/net/imnowa/noe/world/inventory/TabletteOffGUIMenu.java",
+          "src/main/java/net/imnowa/noe/network/TabletteOffGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenTabOff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_tab_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/OpenTabOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabOnToOff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_on_to_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabOnToOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "powerup",
+      "files": [
+        "powerup"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "typing",
+      "files": [
+        "typing"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "gui.noe.tablette_gui.button_blocnote": "Bloc-Note",
       "item.noe.tablette": "Tablette",
+      "gui.noe.tab_note_gui.Notes": "",
+      "subtitles.typing": "",
+      "entity.noe.lanternevolante": "lanterne_volante",
+      "item.noe.horloge": "Horloge",
+      "item.noe.sceptre_core": "Sceptre de CORE",
+      "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
+      "gui.noe.tab_note_gui.button_sauvegarder": "Sauvegarder",
+      "entity.noe.roko_marron": "Roko Marron",
+      "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg",
+      "item.noe.tablette_off": "Tablette Éteinte",
       "item.noe.slimycat_spawn_egg": "Slimycat Spawn Egg",
       "block.noe.piano": "Piano",
       "item.noe.deer_ado_spawn_egg": "Deerfox Adolescent Spawn Egg",
       "entity.noe.deer_ado": "Deerfox Adolescent",
       "item.noe.roko_noir_spawn_egg": "Roko Noir Spawn Egg",
-      "entity.noe.lanternevolante": "lanterne_volante",
-      "item.noe.horloge": "Horloge",
-      "item.noe.sceptre_core": "Sceptre de CORE",
+      "subtitles.powerup": "",
       "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
-      "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
-      "entity.noe.roko_marron": "Roko Marron",
       "item.noe.tablette_photo": "Tablette (Mode Photo)",
       "entity.noe.slimycat": "Slimycat",
       "entity.noe.roko_noir": "Roko Noir",
-      "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg"
+      "gui.noe.tab_note_gui.label_notes": "Notes"
     }
   },
   "foldersRoot": {

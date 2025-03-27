@@ -12,10 +12,11 @@ public class GoPhotoModeProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		boolean photo = false;
+		String notes = "";
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).closeScreen();
 		if ((entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem() == NoeModItems.TABLETTE.get()) {
+			notes = (entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getOrCreateTag().getString("Notes");
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(NoeModItems.TABLETTE_PHOTO.get()).copy();
 				_setstack.setCount(1);
@@ -23,7 +24,9 @@ public class GoPhotoModeProcedure {
 				if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).inventory.markDirty();
 			}
+			(entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getOrCreateTag().putString("Notes", notes);
 		} else if ((entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == NoeModItems.TABLETTE.get()) {
+			notes = (entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag().getString("Notes");
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(NoeModItems.TABLETTE_PHOTO.get()).copy();
 				_setstack.setCount(1);
@@ -31,6 +34,7 @@ public class GoPhotoModeProcedure {
 				if (entity instanceof PlayerEntity)
 					((PlayerEntity) entity).inventory.markDirty();
 			}
+			(entity instanceof LivingEntity ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getOrCreateTag().putString("Notes", notes);
 		}
 	}
 }

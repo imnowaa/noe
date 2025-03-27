@@ -20,6 +20,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.network.PacketBuffer;
 
 import net.imnowa.noe.init.NoeModTabs;
+import net.imnowa.noe.init.NoeModSounds;
 import net.imnowa.noe.init.NoeModMenus;
 import net.imnowa.noe.init.NoeModItems;
 import net.imnowa.noe.init.NoeModEntities;
@@ -46,7 +47,7 @@ public class NoeMod {
 		MinecraftForge.EVENT_BUS.register(new NoeModFMLBusEvents(this));
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		NoeModTabs.load();
-
+		NoeModSounds.REGISTRY.register(bus);
 		NoeModBlocks.REGISTRY.register(bus);
 		NoeModItems.REGISTRY.register(bus);
 		NoeModEntities.REGISTRY.register(bus);

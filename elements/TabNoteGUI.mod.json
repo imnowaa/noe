@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
-    "height": 140,
+    "width": 176,
+    "height": 153,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
@@ -13,28 +13,26 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_bouton_blocnote",
-          "image": "bouton_notes.png",
-          "hoveredImage": "bouton_notes_hover.png",
+          "name": "imagebutton_bouton_valide",
+          "image": "bouton_yes.png",
+          "hoveredImage": "bouton_yes_hover.png",
           "onClick": {
-            "name": "TabToBlocNote"
+            "name": "SaveNote"
           },
           "x": 223,
-          "y": 86,
+          "y": 125,
           "locked": false
         }
       },
       {
-        "type": "imagebutton",
+        "type": "textfield",
         "data": {
-          "name": "imagebutton_bouton_blocnote1",
-          "image": "bouton_pho.png",
-          "hoveredImage": "bouton_pho_hover.png",
-          "onClick": {
-            "name": "GoPhotoMode"
-          },
-          "x": 151,
-          "y": 88,
+          "placeholder": "",
+          "name": "Notes",
+          "width": 181,
+          "height": 20,
+          "x": 119,
+          "y": 99,
           "locked": false
         }
       },
@@ -51,14 +49,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_bouton_onoff_bon",
-          "image": "bouton_switch.png",
-          "hoveredImage": "bouton_switch_hover.png",
+          "name": "imagebutton_bouton_retour",
+          "image": "bouton_retour.png",
+          "hoveredImage": "bouton_retour_hover.png",
           "onClick": {
-            "name": "TabOnToOff"
+            "name": "TabletteRC"
           },
-          "x": 117,
-          "y": 46,
+          "x": 168,
+          "y": 125,
           "locked": false
         }
       }

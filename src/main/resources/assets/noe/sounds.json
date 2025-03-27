@@ -1,0 +1,18 @@
+{
+  "powerup": {
+    "sounds": [
+      {
+        "name": "noe:powerup",
+        "stream": false
+      }
+    ]
+  },
+  "typing": {
+    "sounds": [
+      {
+        "name": "noe:typing",
+        "stream": false
+      }
+    ]
+  }
+}
