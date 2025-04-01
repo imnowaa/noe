@@ -35,6 +35,9 @@ public class NoeModItems {
 	public static final RegistryObject<Item> ROKO_MARRON_SPAWN_EGG = REGISTRY.register("roko_marron_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.ROKO_MARRON, -13421824, -13108, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
 	public static final RegistryObject<Item> ROKO_NOIR_SPAWN_EGG = REGISTRY.register("roko_noir_spawn_egg", () -> new ForgeSpawnEggItem(NoeModEntities.ROKO_NOIR, -13421773, -52, new Item.Properties().group(NoeModTabs.TAB_NOE_AUTRES)));
 	public static final RegistryObject<Item> TABLETTE_OFF = REGISTRY.register("tablette_off", () -> new TabletteOffItem());
+	public static final RegistryObject<Item> BOITE_BIJOUX = block(NoeModBlocks.BOITE_BIJOUX, NoeModTabs.TAB_NOE_AUTRES);
+	public static final RegistryObject<Item> COUSSIN = block(NoeModBlocks.COUSSIN, NoeModTabs.TAB_NOE_AUTRES);
+	public static final RegistryObject<Item> THEIERE = block(NoeModBlocks.THEIERE, NoeModTabs.TAB_NOE_AUTRES);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -13,12 +13,18 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.block.Block;
 
+import net.imnowa.noe.block.TheiereBlock;
 import net.imnowa.noe.block.PianoBlock;
+import net.imnowa.noe.block.CoussinBlock;
+import net.imnowa.noe.block.BoiteBijouxBlock;
 import net.imnowa.noe.NoeMod;
 
 public class NoeModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, NoeMod.MODID);
 	public static final RegistryObject<Block> PIANO = REGISTRY.register("piano", () -> new PianoBlock());
+	public static final RegistryObject<Block> BOITE_BIJOUX = REGISTRY.register("boite_bijoux", () -> new BoiteBijouxBlock());
+	public static final RegistryObject<Block> COUSSIN = REGISTRY.register("coussin", () -> new CoussinBlock());
+	public static final RegistryObject<Block> THEIERE = REGISTRY.register("theiere", () -> new TheiereBlock());
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
@@ -27,6 +33,9 @@ public class NoeModBlocks {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			PianoBlock.registerRenderLayer();
+			BoiteBijouxBlock.registerRenderLayer();
+			CoussinBlock.registerRenderLayer();
+			TheiereBlock.registerRenderLayer();
 		}
 	}
 }

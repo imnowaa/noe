@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/boite_bijoux"
+    },
+    "facing=east": {
+      "model": "noe:block/boite_bijoux",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/boite_bijoux",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/boite_bijoux",
+      "y": 270
+    }
+  }
+}

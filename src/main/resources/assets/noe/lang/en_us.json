@@ -1,5 +1,6 @@
 {
   "gui.noe.tablette_gui.button_blocnote": "Bloc-Note",
+  "block.noe.boite_bijoux": "Boite à Bijoux",
   "item.noe.tablette": "Tablette",
   "subtitles.typing": "",
   "gui.noe.tab_note_gui.Notes": "",
@@ -8,6 +9,7 @@
   "item.noe.sceptre_core": "Sceptre de CORE",
   "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
   "gui.noe.tab_note_gui.button_sauvegarder": "Sauvegarder",
+  "block.noe.coussin": "Coussin",
   "entity.noe.roko_marron": "Roko Marron",
   "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg",
   "item.noe.tablette_off": "Tablette Éteinte",
@@ -17,6 +19,7 @@
   "entity.noe.deer_ado": "Deerfox Adolescent",
   "item.noe.roko_noir_spawn_egg": "Roko Noir Spawn Egg",
   "subtitles.powerup": "",
+  "block.noe.theiere": "Theiere",
   "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
   "itemGroup.noe.noe_autres": "N.O.E Autres",
   "item.noe.tablette_photo": "Tablette (Mode Photo)",

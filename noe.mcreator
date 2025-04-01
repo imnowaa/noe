@@ -526,6 +526,54 @@
           }
         ]
       }
+    },
+    {
+      "name": "BoiteBijoux",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boite_bijoux",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/boite_bijoux.json",
+          "src/main/resources/data/noe/loot_tables/blocks/boite_bijoux.json",
+          "src/main/resources/assets/noe/blockstates/boite_bijoux.json",
+          "src/main/java/net/imnowa/noe/block/BoiteBijouxBlock.java",
+          "src/main/resources/assets/noe/models/item/boite_bijoux.json"
+        ]
+      }
+    },
+    {
+      "name": "Coussin",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coussin",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/noe/loot_tables/blocks/coussin.json",
+          "src/main/java/net/imnowa/noe/block/CoussinBlock.java",
+          "src/main/resources/assets/noe/models/block/coussin.json",
+          "src/main/resources/assets/noe/models/item/coussin.json",
+          "src/main/resources/assets/noe/blockstates/coussin.json"
+        ]
+      }
+    },
+    {
+      "name": "Theiere",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theiere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/block/TheiereBlock.java",
+          "src/main/resources/assets/noe/blockstates/theiere.json",
+          "src/main/resources/assets/noe/models/item/theiere.json",
+          "src/main/resources/assets/noe/models/block/theiere.json",
+          "src/main/resources/data/noe/loot_tables/blocks/theiere.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -552,6 +600,7 @@
   "language_map": {
     "en_us": {
       "gui.noe.tablette_gui.button_blocnote": "Bloc-Note",
+      "block.noe.boite_bijoux": "Boite à Bijoux",
       "item.noe.tablette": "Tablette",
       "subtitles.typing": "",
       "gui.noe.tab_note_gui.Notes": "",
@@ -560,6 +609,7 @@
       "item.noe.sceptre_core": "Sceptre de CORE",
       "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
       "gui.noe.tab_note_gui.button_sauvegarder": "Sauvegarder",
+      "block.noe.coussin": "Coussin",
       "entity.noe.roko_marron": "Roko Marron",
       "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg",
       "item.noe.tablette_off": "Tablette Éteinte",
@@ -569,6 +619,7 @@
       "entity.noe.deer_ado": "Deerfox Adolescent",
       "item.noe.roko_noir_spawn_egg": "Roko Noir Spawn Egg",
       "subtitles.powerup": "",
+      "block.noe.theiere": "Theiere",
       "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
       "item.noe.tablette_photo": "Tablette (Mode Photo)",
@@ -584,7 +635,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",
