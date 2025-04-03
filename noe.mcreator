@@ -574,6 +574,22 @@
           "src/main/resources/data/noe/loot_tables/blocks/theiere.json"
         ]
       }
+    },
+    {
+      "name": "Gouvernail",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gouvernail",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/gouvernail.json",
+          "src/main/resources/data/noe/loot_tables/blocks/gouvernail.json",
+          "src/main/resources/assets/noe/models/item/gouvernail.json",
+          "src/main/resources/assets/noe/blockstates/gouvernail.json",
+          "src/main/java/net/imnowa/noe/block/GouvernailBlock.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -622,6 +638,7 @@
       "block.noe.theiere": "Theiere",
       "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
       "itemGroup.noe.noe_autres": "N.O.E Autres",
+      "block.noe.gouvernail": "Gouvernail",
       "item.noe.tablette_photo": "Tablette (Mode Photo)",
       "entity.noe.slimycat": "Slimycat",
       "entity.noe.roko_noir": "Roko Noir",
@@ -635,7 +652,7 @@
   "workspaceSettings": {
     "modid": "noe",
     "modName": "NOE",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "author": "imnowa",
     "websiteURL": "https://mcreator.net",
     "license": "Not specified",

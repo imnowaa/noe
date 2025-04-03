@@ -38,6 +38,7 @@ public class NoeModItems {
 	public static final RegistryObject<Item> BOITE_BIJOUX = block(NoeModBlocks.BOITE_BIJOUX, NoeModTabs.TAB_NOE_AUTRES);
 	public static final RegistryObject<Item> COUSSIN = block(NoeModBlocks.COUSSIN, NoeModTabs.TAB_NOE_AUTRES);
 	public static final RegistryObject<Item> THEIERE = block(NoeModBlocks.THEIERE, NoeModTabs.TAB_NOE_AUTRES);
+	public static final RegistryObject<Item> GOUVERNAIL = block(NoeModBlocks.GOUVERNAIL, NoeModTabs.TAB_NOE_AUTRES);
 
 	// Start of user code block custom items
 	// End of user code block custom items
