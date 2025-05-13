@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/sac_de_frappe",
+  "textures": {
+    "all": "noe:block/sac_de_frappe",
+    "particle": "noe:block/sac_de_frappe",
+    "0": "noe:block/sac_de_frappe"
+  }
+}

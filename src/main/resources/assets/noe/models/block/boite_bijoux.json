@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/boite_bijoux",
+  "textures": {
+    "all": "noe:block/texture",
+    "particle": "noe:block/texture",
+    "0": "noe:block/texture"
+  }
+}

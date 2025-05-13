@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sac_de_frappe_future"
+      },
+      "name": "default"
+    }
+  }
+}

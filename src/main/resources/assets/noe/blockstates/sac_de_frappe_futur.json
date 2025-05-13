@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/sac_de_frappe_futur"
+    },
+    "facing=east": {
+      "model": "noe:block/sac_de_frappe_futur",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/sac_de_frappe_futur",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/sac_de_frappe_futur",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/piano_charon"
+    },
+    "facing=east": {
+      "model": "noe:block/piano_charon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/piano_charon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/piano_charon",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "texture_tea_pot"
+      },
+      "name": "default"
+    }
+  }
+}

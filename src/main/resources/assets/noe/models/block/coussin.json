@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/coussin",
+  "textures": {
+    "all": "noe:block/texture_coussin",
+    "particle": "noe:block/texture_coussin",
+    "0": "noe:block/texture_coussin"
+  }
+}

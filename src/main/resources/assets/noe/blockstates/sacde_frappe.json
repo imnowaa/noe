@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/sacde_frappe"
+    },
+    "facing=east": {
+      "model": "noe:block/sacde_frappe",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/sacde_frappe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/sacde_frappe",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "noe:custom/tablette",
+  "textures": {
+    "2": "noe:block/tablette",
+    "particle": "noe:item/tablette"
+  }
+}

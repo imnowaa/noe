@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/machine_a_ecrire",
+  "textures": {
+    "all": "noe:block/machine_a_ecrire",
+    "particle": "noe:block/machine_a_ecrire",
+    "0": "noe:block/machine_a_ecrire"
+  }
+}

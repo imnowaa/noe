@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "barre_traction"
+      },
+      "name": "default"
+    }
+  }
+}

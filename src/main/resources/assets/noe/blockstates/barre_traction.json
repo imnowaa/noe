@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/barre_traction"
+    },
+    "facing=east": {
+      "model": "noe:block/barre_traction",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/barre_traction",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/barre_traction",
+      "y": 270
+    }
+  }
+}

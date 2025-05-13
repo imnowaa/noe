@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/cam_on",
+  "textures": {
+    "all": "noe:block/cam_on",
+    "particle": "noe:block/cam_on",
+    "0": "noe:block/cam_on"
+  }
+}

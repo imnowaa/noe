@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/gouvernail"
+    },
+    "facing=east": {
+      "model": "noe:block/gouvernail",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/gouvernail",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/gouvernail",
+      "y": 270
+    }
+  }
+}

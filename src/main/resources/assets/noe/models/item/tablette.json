@@ -1,0 +1,6 @@
+{
+  "parent": "noe:displaysettings/tablette",
+  "textures": {
+    "layer0": "noe:item/tabletteon"
+  }
+}

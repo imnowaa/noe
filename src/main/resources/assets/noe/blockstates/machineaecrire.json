@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "noe:block/machineaecrire"
+    },
+    "facing=east": {
+      "model": "noe:block/machineaecrire",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "noe:block/machineaecrire",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "noe:block/machineaecrire",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 173,
+    "height": 148,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "tablette_eteinte.png",
+          "use1Xscale": false,
+          "x": -26,
+          "y": -5,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_bouton_onoff_bon",
+          "image": "bouton_switch.png",
+          "hoveredImage": "bouton_switch_hover.png",
+          "onClick": {
+            "name": "TabOffToOn"
+          },
+          "x": 117,
+          "y": 46,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

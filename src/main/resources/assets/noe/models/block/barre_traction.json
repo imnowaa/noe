@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/barre_traction",
+  "textures": {
+    "all": "noe:block/barre_traction",
+    "particle": "noe:block/barre_traction",
+    "0": "noe:block/barre_traction"
+  }
+}

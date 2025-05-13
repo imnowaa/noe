@@ -1,0 +1,8 @@
+{
+  "parent": "noe:custom/banc_abdos",
+  "textures": {
+    "all": "noe:block/banc_abdos",
+    "particle": "noe:block/banc_abdos",
+    "0": "noe:block/banc_abdos"
+  }
+}

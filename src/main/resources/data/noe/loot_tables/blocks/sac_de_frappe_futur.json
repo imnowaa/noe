@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "noe:blocks/sac_de_frappe_futur",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "noe:sac_de_frappe_futur"
+        }
+      ]
+    }
+  ]
+}

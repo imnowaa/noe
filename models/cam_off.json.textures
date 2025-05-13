@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cam_off"
+      },
+      "name": "default"
+    }
+  }
+}

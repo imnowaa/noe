@@ -1,0 +1,42 @@
+{
+  "powerup": {
+    "sounds": [
+      {
+        "name": "noe:powerup",
+        "stream": false
+      }
+    ]
+  },
+  "typing": {
+    "sounds": [
+      {
+        "name": "noe:typing",
+        "stream": false
+      }
+    ]
+  },
+  "infiltration": {
+    "sounds": [
+      {
+        "name": "noe:infiltration",
+        "stream": false
+      }
+    ]
+  },
+  "machineaecrire": {
+    "sounds": [
+      {
+        "name": "noe:machineaecrire",
+        "stream": false
+      }
+    ]
+  },
+  "punchbag": {
+    "sounds": [
+      {
+        "name": "noe:punchbag",
+        "stream": false
+      }
+    ]
+  }
+}

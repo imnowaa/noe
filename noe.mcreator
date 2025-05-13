@@ -1,0 +1,904 @@
+{
+  "mod_elements": [
+    {
+      "name": "NOEAutres",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noe_autres",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Piano",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piano",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/piano.json",
+          "src/main/java/net/imnowa/noe/block/PianoBlock.java",
+          "src/main/resources/data/noe/loot_tables/blocks/piano.json",
+          "src/main/resources/assets/noe/blockstates/piano.json",
+          "src/main/resources/assets/noe/models/item/piano.json"
+        ]
+      }
+    },
+    {
+      "name": "Lanternevolante",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lanternevolante",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/lanternevolante_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/model/LanternevolanteModel.java",
+          "src/main/java/net/imnowa/noe/entity/LanternevolanteEntity.java",
+          "src/main/java/net/imnowa/noe/client/renderer/LanternevolanteRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "Mobmonteeconstante",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mobmonteeconstante",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/MobmonteeconstanteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NbtLanterne",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nbt_lanterne",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/NbtLanterneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SceptreCORE",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sceptre_core",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/sceptre_core.json",
+          "src/main/java/net/imnowa/noe/item/renderer/SceptreCOREItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/SceptreCOREItem.java",
+          "src/main/java/net/imnowa/noe/item/model/SceptreCOREItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "Horloge",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horloge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/renderer/HorlogeItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/HorlogeItem.java",
+          "src/main/resources/assets/noe/models/item/horloge.json",
+          "src/main/java/net/imnowa/noe/item/model/HorlogeItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "TabletteGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/world/inventory/TabletteGUIMenu.java",
+          "src/main/java/net/imnowa/noe/network/TabletteGUIButtonMessage.java",
+          "src/main/java/net/imnowa/noe/client/gui/TabletteGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "GoPhotoMode",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "go_photo_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/GoPhotoModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhotoOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photo_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/client/screens/PhotoOverlayOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "PhotoOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photo_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/PhotoOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabletteRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tablette",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tablette",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/renderer/TabletteItemRenderer.java",
+          "src/main/resources/assets/noe/models/item/tablette.json",
+          "src/main/java/net/imnowa/noe/item/TabletteItem.java",
+          "src/main/java/net/imnowa/noe/item/model/TabletteItemModel.java"
+        ]
+      }
+    },
+    {
+      "name": "TablettePhoto",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tablette_photo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/tablette_photo.json",
+          "src/main/java/net/imnowa/noe/item/model/TablettePhotoItemModel.java",
+          "src/main/java/net/imnowa/noe/item/renderer/TablettePhotoItemRenderer.java",
+          "src/main/java/net/imnowa/noe/item/TablettePhotoItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TablettePhotoRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_photo_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TablettePhotoRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DeerAdo",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deer_ado",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/client/renderer/DeerAdoRenderer.java",
+          "src/main/resources/assets/noe/models/item/deer_ado_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/DeerAdoEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Slimycat",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimycat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/slimycat_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/SlimycatEntity.java",
+          "src/main/java/net/imnowa/noe/client/renderer/SlimycatRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RokoMarron",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roko_marron",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/roko_marron_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/RokoMarronEntity.java",
+          "src/main/java/net/imnowa/noe/client/renderer/RokoMarronRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RokoNoir",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roko_noir",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/item/roko_noir_spawn_egg.json",
+          "src/main/java/net/imnowa/noe/entity/RokoNoirEntity.java",
+          "src/main/java/net/imnowa/noe/client/renderer/RokoNoirRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TabNoteGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_note_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/world/inventory/TabNoteGUIMenu.java",
+          "src/main/java/net/imnowa/noe/client/gui/TabNoteGUIScreen.java",
+          "src/main/java/net/imnowa/noe/network/TabNoteGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "TabToBlocNote",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_to_bloc_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabToBlocNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SaveNote",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/SaveNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteOff",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tablette_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/item/TabletteOffItem.java",
+          "src/main/resources/assets/noe/models/item/tablette_off.json"
+        ]
+      }
+    },
+    {
+      "name": "TabOffToOn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_off_to_on",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabOffToOnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabletteOffGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tablette_off_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/client/gui/TabletteOffGUIScreen.java",
+          "src/main/java/net/imnowa/noe/world/inventory/TabletteOffGUIMenu.java",
+          "src/main/java/net/imnowa/noe/network/TabletteOffGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenTabOff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_tab_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/OpenTabOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TabOnToOff",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tab_on_to_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/TabOnToOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BoiteBijoux",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boite_bijoux",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/boite_bijoux.json",
+          "src/main/resources/data/noe/loot_tables/blocks/boite_bijoux.json",
+          "src/main/resources/assets/noe/blockstates/boite_bijoux.json",
+          "src/main/java/net/imnowa/noe/block/BoiteBijouxBlock.java",
+          "src/main/resources/assets/noe/models/item/boite_bijoux.json"
+        ]
+      }
+    },
+    {
+      "name": "Coussin",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coussin",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/noe/loot_tables/blocks/coussin.json",
+          "src/main/java/net/imnowa/noe/block/CoussinBlock.java",
+          "src/main/resources/assets/noe/models/block/coussin.json",
+          "src/main/resources/assets/noe/models/item/coussin.json",
+          "src/main/resources/assets/noe/blockstates/coussin.json"
+        ]
+      }
+    },
+    {
+      "name": "Theiere",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "theiere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/block/TheiereBlock.java",
+          "src/main/resources/assets/noe/blockstates/theiere.json",
+          "src/main/resources/assets/noe/models/item/theiere.json",
+          "src/main/resources/assets/noe/models/block/theiere.json",
+          "src/main/resources/data/noe/loot_tables/blocks/theiere.json"
+        ]
+      }
+    },
+    {
+      "name": "Gouvernail",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gouvernail",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/gouvernail.json",
+          "src/main/resources/data/noe/loot_tables/blocks/gouvernail.json",
+          "src/main/resources/assets/noe/models/item/gouvernail.json",
+          "src/main/resources/assets/noe/blockstates/gouvernail.json",
+          "src/main/java/net/imnowa/noe/block/GouvernailBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Machineaecrire",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machineaecrire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/block/MachineaecrireBlock.java",
+          "src/main/resources/assets/noe/models/item/machineaecrire.json",
+          "src/main/resources/data/noe/loot_tables/blocks/machineaecrire.json",
+          "src/main/resources/assets/noe/models/block/machineaecrire.json",
+          "src/main/resources/assets/noe/blockstates/machineaecrire.json"
+        ]
+      }
+    },
+    {
+      "name": "SonMachineAEcrire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "son_machine_a_ecrire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/SonMachineAEcrireProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PianoCharon",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piano_charon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/blockstates/piano_charon.json",
+          "src/main/resources/assets/noe/models/item/piano_charon.json",
+          "src/main/java/net/imnowa/noe/block/PianoCharonBlock.java",
+          "src/main/resources/assets/noe/models/block/piano_charon.json",
+          "src/main/resources/data/noe/loot_tables/blocks/piano_charon.json"
+        ]
+      }
+    },
+    {
+      "name": "SacdeFrappe",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sacde_frappe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/noe/loot_tables/blocks/sacde_frappe.json",
+          "src/main/resources/assets/noe/blockstates/sacde_frappe.json",
+          "src/main/resources/assets/noe/models/item/sacde_frappe.json",
+          "src/main/resources/assets/noe/models/block/sacde_frappe.json",
+          "src/main/java/net/imnowa/noe/block/SacdeFrappeBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "SacDeFrappeFutur",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sac_de_frappe_futur",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/block/SacDeFrappeFuturBlock.java",
+          "src/main/resources/assets/noe/models/block/sac_de_frappe_futur.json",
+          "src/main/resources/assets/noe/models/item/sac_de_frappe_futur.json",
+          "src/main/resources/assets/noe/blockstates/sac_de_frappe_futur.json",
+          "src/main/resources/data/noe/loot_tables/blocks/sac_de_frappe_futur.json"
+        ]
+      }
+    },
+    {
+      "name": "BarreTraction",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barre_traction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/block/BarreTractionBlock.java",
+          "src/main/resources/assets/noe/blockstates/barre_traction.json",
+          "src/main/resources/data/noe/loot_tables/blocks/barre_traction.json",
+          "src/main/resources/assets/noe/models/block/barre_traction.json",
+          "src/main/resources/assets/noe/models/item/barre_traction.json"
+        ]
+      }
+    },
+    {
+      "name": "BancAbdo",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banc_abdo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/blockstates/banc_abdo.json",
+          "src/main/java/net/imnowa/noe/block/BancAbdoBlock.java",
+          "src/main/resources/data/noe/loot_tables/blocks/banc_abdo.json",
+          "src/main/resources/assets/noe/models/block/banc_abdo.json",
+          "src/main/resources/assets/noe/models/item/banc_abdo.json"
+        ]
+      }
+    },
+    {
+      "name": "CamOff",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cam_off",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/models/block/cam_off.json",
+          "src/main/resources/data/noe/loot_tables/blocks/cam_off.json",
+          "src/main/java/net/imnowa/noe/block/CamOffBlock.java",
+          "src/main/resources/assets/noe/blockstates/cam_off.json",
+          "src/main/resources/assets/noe/models/item/cam_off.json"
+        ]
+      }
+    },
+    {
+      "name": "CamOn",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cam_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/noe/blockstates/cam_on.json",
+          "src/main/java/net/imnowa/noe/block/CamOnBlock.java",
+          "src/main/resources/assets/noe/models/item/cam_on.json",
+          "src/main/resources/data/noe/loot_tables/blocks/cam_on.json",
+          "src/main/resources/assets/noe/models/block/cam_on.json"
+        ]
+      }
+    },
+    {
+      "name": "CamSwitch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cam_switch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/imnowa/noe/procedures/CamSwitchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "powerup",
+      "files": [
+        "powerup"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "typing",
+      "files": [
+        "typing"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "infiltration",
+      "files": [
+        "infiltration"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "machineaecrire",
+      "files": [
+        "machineaecrire"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "punchbag",
+      "files": [
+        "punchbag"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "subtitles.auraria": "",
+      "gui.noe.tablette_gui.button_blocnote": "Bloc-Note",
+      "block.noe.cam_off": "Caméra Off",
+      "block.noe.cam_on": "Caméra On",
+      "block.noe.boite_bijoux": "Boite à Bijoux",
+      "item.noe.tablette": "Tablette",
+      "gui.noe.tab_note_gui.Notes": "",
+      "subtitles.typing": "",
+      "entity.noe.lanternevolante": "lanterne_volante",
+      "block.noe.sac_de_frappe_futur": "Sac de Frappe Futuriste",
+      "item.noe.horloge": "Horloge",
+      "item.noe.sceptre_core": "Sceptre de CORE",
+      "item.noe.lanternevolante_spawn_egg": "lanterne_volante Spawn Egg",
+      "gui.noe.tab_note_gui.button_sauvegarder": "Sauvegarder",
+      "block.noe.coussin": "Coussin",
+      "block.noe.piano_charon": "Piano Charon",
+      "entity.noe.roko_marron": "Roko Marron",
+      "subtitles.punchbag": "",
+      "item.noe.roko_marron_spawn_egg": "Roko Marron Spawn Egg",
+      "block.noe.sacde_frappe": "Sac de Frappe",
+      "block.noe.banc_abdo": "Banc d\u0027Abdos",
+      "item.noe.tablette_off": "Tablette Éteinte",
+      "item.noe.slimycat_spawn_egg": "Slimycat Spawn Egg",
+      "block.noe.piano": "Piano",
+      "item.noe.deer_ado_spawn_egg": "Deerfox Adolescent Spawn Egg",
+      "entity.noe.deer_ado": "Deerfox Adolescent",
+      "item.noe.roko_noir_spawn_egg": "Roko Noir Spawn Egg",
+      "block.noe.machineaecrire": "Machine à Écrire",
+      "block.noe.barre_traction": "Barre de Traction",
+      "subtitles.powerup": "",
+      "subtitles.infiltration": "",
+      "block.noe.theiere": "Theiere",
+      "gui.noe.tablette_gui.button_mode_photo": "Mode Photo",
+      "subtitles.venefica": "",
+      "subtitles.machineaecrire": "",
+      "itemGroup.noe.noe_autres": "N.O.E Autres",
+      "block.noe.gouvernail": "Gouvernail",
+      "item.noe.tablette_photo": "Tablette (Mode Photo)",
+      "entity.noe.slimycat": "Slimycat",
+      "entity.noe.roko_noir": "Roko Noir",
+      "gui.noe.tab_note_gui.label_notes": "Notes"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "noe",
+    "modName": "NOE",
+    "version": "1.2.2",
+    "author": "imnowa",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Pour le serveur N.O.E",
+    "modElementsPackage": "net.imnowa.noe"
+  },
+  "mcreatorVersion": 202400452410
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "noe:displaysettings/sceptre_core",
+  "textures": {
+    "layer0": "noe:item/sceptre"
+  }
+}
